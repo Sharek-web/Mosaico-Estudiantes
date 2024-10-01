@@ -30,7 +30,7 @@ professors_page = st.Page(
 streamlit_page = st.navigation([main_page, students_page, professors_page])
 
 # --- Configuración del logo ---
-st.logo('static\ExternadoColombia.png', icon_image='static\ExternadoColombia.png')
+st.logo('static/ExternadoColombia.png', icon_image='static/ExternadoColombia.png')
 
 # --- Configuración de la página ---
 st.set_page_config(page_icon="static/favicon.png")
