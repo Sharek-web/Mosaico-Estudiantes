@@ -46,6 +46,7 @@ También el `.gitignore` esta configurado para ignorar la base de datos `informa
 ## Distribución de los Directorios
 
 El repositorio local debería tener la siguiente forma:
+
     sistemaInformacionDepMat
     ├── .streamlit
     │   └── config.toml
