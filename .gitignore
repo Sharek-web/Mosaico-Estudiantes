@@ -1,4 +1,7 @@
-venv
 venv/
-db/
-data/
+db/information_system.db
+data/*.csv
+data/*.xlsx
+__pycache__/
+*.pyc
+.DS_Store
