@@ -17,13 +17,13 @@ main_page = st.Page(
 students_page = st.Page(
     'src/pages/students.py', 
     title='Estudiantes', 
-    url_path='panel/estudiantes', 
+    url_path='estudiantes', 
     icon=':material/school:'
 )
 professors_page = st.Page(
     'src/pages/professors.py', 
     title='Profesores', 
-    url_path='panel/profesores', 
+    url_path='profesores', 
     icon=':material/real_estate_agent:'
 )
 
