@@ -1,6 +1,10 @@
 import sqlite3
 
-def create_database(db_path, schema_path):
+DB_NAME = 'information_system'
+DB_PATH = 'db/information_system.db'
+SCHEMA_PATH = 'sql/db_schema.sql'
+
+def create_database(db_path = DB_PATH, schema_path = SCHEMA_PATH):
     """Crea una base de datos SQLite a partir de un script SQL.
 
     Args:
