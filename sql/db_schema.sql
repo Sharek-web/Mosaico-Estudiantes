@@ -208,14 +208,12 @@ CREATE TABLE Dia_Semana (
 );
 
 -- Resultado Solicitud consejo
-
 CREATE TABLE Resultado_Solicitud_Consejo (
     id_Resultado_Solicitud INTEGER PRIMARY KEY AUTOINCREMENT,
     Resultado TEXT NOT NULL
 );
 
 -- Solicitud consejo
-
 CREATE TABLE Solicitud_consejo (
     id_Solicitud INTEGER PRIMARY KEY AUTOINCREMENT,
     fecha_solicitud DATE NOT NULL,
@@ -228,44 +226,39 @@ CREATE TABLE Solicitud_consejo (
 );
 
 -- Doc_Solicitud_Consejo
-
 CREATE TABLE Doc_Solicitud_Consejo (
     id_doc_solicitud INTEGER PRIMARY KEY AUTOINCREMENT,
     id_docente INTEGER NOT NULL,
     id_solicitud INTEGER NOT NULL,
 
     FOREIGN KEY (id_docente) REFERENCES Docente(id_docente),
-    FOREIGN KEY (id_solicitud) REFERENCES Solicitud_consejo(id_Solicitud),    
+    FOREIGN KEY (id_solicitud) REFERENCES Solicitud_consejo(id_Solicitud)
 );
 
 -- Est_Solicitud_Consejo
-
 CREATE TABLE Est_Solicitud_Consejo (
     id_doc_solicitud INTEGER PRIMARY KEY AUTOINCREMENT,
     id_estudiante INTEGER NOT NULL,
     id_solicitud INTEGER NOT NULL,
 
     FOREIGN KEY (id_estudiante) REFERENCES Estudiante(id_estudiante),
-    FOREIGN KEY (id_solicitud) REFERENCES Solicitud_consejo(id_Solicitud),    
+    FOREIGN KEY (id_solicitud) REFERENCES Solicitud_consejo(id_Solicitud)
 );
 
 
 -- Modalidad
-
 CREATE TABLE Modalidad (
     id_Modalidad INTEGER PRIMARY KEY AUTOINCREMENT,
     Modalidad TEXT NOT NULL  
 );
 
 -- Periodo Academico
-
 CREATE TABLE Periodo_Academico (
     id_periodo INTEGER PRIMARY KEY AUTOINCREMENT,
     Nombre TEXT NOT NULL  
 );
 
 -- Monitor
-
 CREATE TABLE Monitor (
     id_est_Monitoria INTEGER PRIMARY KEY AUTOINCREMENT,
     id_asignatura INTEGER NOT NULL,
@@ -278,13 +271,10 @@ CREATE TABLE Monitor (
     
     FOREIGN KEY (id_estudiante) REFERENCES Estudiante(id_estudiante),
     FOREIGN KEY (id_docente) REFERENCES Docente(id_docente),
-    FOREIGN KEY (id_modalidad) REFERENCES Modalidad(id_Modalidad),
-    
-
+    FOREIGN KEY (id_modalidad) REFERENCES Modalidad(id_Modalidad)
 );
 
 -- Horario Monitoria
-
 CREATE TABLE Horario_Monitoria (
     id_Horario_Monitoria INTEGER PRIMARY KEY AUTOINCREMENT,
     id_est_Monitoria INTEGER NOT NULL,
@@ -627,10 +617,10 @@ CREATE TABLE Colegio (
     id_colegio INTEGER PRIMARY KEY,
     Nombre TEXT,
     id_tipo INTEGER,
-    id_municipio INTEGER
-    direccion TEXT
+    id_municipio INTEGER,
+    direccion TEXT,
 
-    FOREIGN KEY (id_tipo) REFERENCES tipo_colegio(id_Tipo_Colegio)
+    FOREIGN KEY (id_tipo) REFERENCES tipo_colegio(id_Tipo_Colegio),
     FOREIGN KEY (id_municipio) REFERENCES Municipio(id_municipio)
 );
 
